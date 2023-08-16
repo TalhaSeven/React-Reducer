@@ -34,7 +34,7 @@ const UseReducerExample = () => {
         Get Cat Image
       </button>
       {error && <h2>{error}</h2>}
-      {catImage && <img width="50%" src={catImage} alt="img" />}
+      {catImage && <img width="100%" src={catImage} alt="img" />}
     </div>
   )
 }
