@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# React UseReducer Example
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project demonstrates the use of the `useReducer` hook in a React application. It showcases a simple functionality of fetching cat images from an API and displaying them based on different states using a reducer.
 
-## Available Scripts
+## Components
 
-In the project directory, you can run:
+### App Component
 
-### `yarn start`
+The `App` component serves as the entry point of the application. It imports and renders the `UseReducerExample` component.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### initialState and reducer
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The `initialState` object defines the initial state of the component. It includes properties for `loading`, `catImage`, and `error`.
 
-### `yarn test`
+The `reducer` function takes the current state and an action as parameters and returns a new state based on the action type.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### UseReducerExample Component
 
-### `yarn build`
+The `UseReducerExample` component demonstrates the use of `useReducer` hook along with the `initialState` and `reducer`. This component fetches a cat image from an API and handles different states such as loading, success, and failure.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- The `getCatImage` function sends a fetch request to the cat image API. It dispatches actions to the reducer to handle loading, success, and failure states.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- The component renders a "Get Cat Image" button that triggers the `getCatImage` function. The button is disabled during loading.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- If an error occurs during the fetch, it displays an error message. If the fetch is successful, it displays the fetched cat image.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# React UseReducer Örneği
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Bu proje, bir React uygulamasında `useReducer` kancasının kullanımını göstermektedir. Bir azaltıcı (reducer) kullanarak farklı durumlar temelinde API'den kedi resimleri çekme işlevselliğini basitçe sergiler.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Bileşenler
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### App Bileşeni
 
-## Learn More
+`App` bileşeni, uygulamanın giriş noktası olarak hizmet eder. `UseReducerExample` bileşenini içe aktarır ve bu bileşeni render eder.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### initialState ve reducer
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`initialState` nesnesi bileşenin başlangıç durumunu tanımlar. Bu durum, `loading`, `catImage` ve `error` özelliklerini içerir.
 
-### Code Splitting
+`reducer` fonksiyonu mevcut durumu ve bir eylemi parametre olarak alır ve eylem türüne dayalı olarak yeni bir durum döndürür.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### UseReducerExample Bileşeni
 
-### Analyzing the Bundle Size
+`UseReducerExample` bileşeni, `useReducer` kancasının ve `initialState` ile `reducer`'ın kullanımını sergiler. Bu bileşen, bir kedi resmini bir API'den almayı ve yükleme, başarı ve hata gibi farklı durumları ele almayı gösterir.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- `getCatImage` fonksiyonu, kedi resmi API'ye bir talep gönderir. Yükleme, başarı ve hata durumlarıyla başa çıkmak için azaltıcıya eylemler gönderir.
 
-### Making a Progressive Web App
+- Bileşen, "Kedi Resmi Al" adlı bir düğme render eder. Bu düğme, yükleme sırasında devre dışı bırakılır.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- İstekte bir hata oluşursa, hata mesajını görüntüler. İstek başarılı ise, alınan kedi resmini görüntüler.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
